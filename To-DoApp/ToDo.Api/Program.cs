@@ -1,6 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using ToDo.Api.Data;
+using ToDo.Api.Services;
 
 namespace ToDo.Api
 {
@@ -28,6 +29,7 @@ namespace ToDo.Api
             });
 
 
+            builder.Services.AddScoped<ITodoService, TodoService>();
 
             builder.Services.AddControllers();
        
