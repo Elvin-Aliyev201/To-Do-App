@@ -1,0 +1,17 @@
+
+bin/
+obj/
+out/
+
+
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.sln.docstates
+
+
+appsettings.Development.json
+appsettings.Local.json
+*.env
+
