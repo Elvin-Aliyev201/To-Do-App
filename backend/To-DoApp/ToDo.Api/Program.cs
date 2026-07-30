@@ -43,7 +43,7 @@ namespace ToDo.Api
 
 
             var frontendUrl = Environment.GetEnvironmentVariable("FRONTEND_URL")
-               ?? throw new InvalidOperationException("FRONTEND_URL environment variable is missing.");
+             ?? throw new InvalidOperationException("FRONTEND_URL environment variable is missing.");
 
             builder.Services.AddCors(options =>
             {
