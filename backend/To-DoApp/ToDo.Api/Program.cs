@@ -34,7 +34,8 @@ namespace ToDo.Api
                 $"Port={databasePort};" +
                 $"Database={databaseName};" +
                 $"Username={databaseUser};" +
-                $"Password={databasePassword}";
+                $"Password={databasePassword}"+
+                $"SSL Mode=Require;Trust Server Certificate=true"; ;
 
             builder.Services.AddDbContext<AppDbContext>(options =>
             {
