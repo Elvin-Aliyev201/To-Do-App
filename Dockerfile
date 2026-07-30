@@ -1,15 +1,14 @@
 # Build stage
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 
 WORKDIR /src
 
-COPY backend/To-DoApp/
-    ToDo.Api/
-RUN dotnet restore backend/To-DoApp/ToDo.Api
+COPY backend/To-DoApp/ToDo.Api/ToDo.Api.csproj backend/To-DoApp/ToDo.Api/
+RUN dotnet restore backend/To-DoApp/ToDo.Api/ToDo.Api.csproj
 
 COPY . .
 
-WORKDIR /src/backend/ToDo.Api
+WORKDIR /src/backend/To-DoApp/ToDo.Api
 
 RUN dotnet publish -c Release -o /app/publish
 
