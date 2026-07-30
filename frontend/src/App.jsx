@@ -1,11 +1,7 @@
+import Home from "./pages/Home";
+
 function App() {
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-blue-600">
-        Todo App
-      </h1>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;

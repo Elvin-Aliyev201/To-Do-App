@@ -29,6 +29,17 @@ namespace ToDo.Api
             });
 
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowFrontend", policy =>
+                {
+                    policy.WithOrigins("http://localhost:5173")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
+
+
             builder.Services.AddScoped<ITodoService, TodoService>();
 
             builder.Services.AddControllers();
@@ -51,7 +62,7 @@ namespace ToDo.Api
 
             app.UseAuthorization();
 
-
+            app.UseCors("AllowFrontend");
             app.MapControllers();
 
             app.Run();
