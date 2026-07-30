@@ -42,16 +42,18 @@ namespace ToDo.Api
             });
 
 
+            var frontendUrl = Environment.GetEnvironmentVariable("FRONTEND_URL")
+               ?? throw new InvalidOperationException("FRONTEND_URL environment variable is missing.");
+
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowFrontend", policy =>
                 {
-                    policy.WithOrigins("http://localhost:5173")
+                    policy.WithOrigins(frontendUrl)
                           .AllowAnyHeader()
                           .AllowAnyMethod();
                 });
             });
-
 
             builder.Services.AddScoped<ITodoService, TodoService>();
 
