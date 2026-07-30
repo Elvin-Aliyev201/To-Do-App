@@ -41,15 +41,17 @@ namespace ToDo.Api
                 options.UseNpgsql(connectionString);
             });
 
-
             var frontendUrl = Environment.GetEnvironmentVariable("FRONTEND_URL")
-             ?? throw new InvalidOperationException("FRONTEND_URL environment variable is missing.");
+                ?? throw new InvalidOperationException("FRONTEND_URL environment variable is missing.");
 
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowFrontend", policy =>
                 {
-                    policy.WithOrigins(frontendUrl)
+                    policy.WithOrigins(
+                            "http://localhost:5173",
+                            "https://to-do-app-sigma-eight-17.vercel.app"
+                          )
                           .AllowAnyHeader()
                           .AllowAnyMethod();
                 });
@@ -73,10 +75,10 @@ namespace ToDo.Api
             
 
             app.UseHttpsRedirection();
-
+            app.UseCors("AllowFrontend");
             app.UseAuthorization();
 
-            app.UseCors("AllowFrontend");
+          
             app.MapControllers();
 
             app.Run();
