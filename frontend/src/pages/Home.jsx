@@ -1,5 +1,8 @@
+// src/pages/Home.jsx
 import { useState, useEffect } from "react";
 import todoService from "../services/todoService";
+import TodoList from "../components/TodoList";
+import TodoForm from "../components/TodoForm";
 
 function Home() {
   const [todos, setTodos] = useState([]);
@@ -10,17 +13,59 @@ function Home() {
     });
   }, []);
 
-  return (
-    <div className="max-w-xl mx-auto mt-10 px-4">
-      <h1 className="text-2xl font-bold mb-4">Todo App</h1>
+  const handleCreate = (title) => {
+    todoService.create({ title }).then((response) => {
+      setTodos([...todos, response.data]);
+    });
+  };
 
-      <ul className="space-y-2">
-        {todos.map((todo) => (
-          <li key={todo.id} className="border rounded p-2">
-            {todo.title}
-          </li>
-        ))}
-      </ul>
+  const handleDelete = (id) => {
+    todoService.remove(id).then(() => {
+      setTodos(todos.filter((todo) => todo.id !== id));
+    });
+  };
+
+  const handleToggle = (todo) => {
+    const updatedTodo = { ...todo, isCompleted: !todo.isCompleted };
+    todoService.update(todo.id, updatedTodo).then(() => {
+      setTodos(todos.map((t) => (t.id === todo.id ? updatedTodo : t)));
+    });
+  };
+
+  const handleUpdateTitle = (todo, newTitle) => {
+    const updatedTodo = { ...todo, title: newTitle };
+    todoService.update(todo.id, updatedTodo).then(() => {
+      setTodos(todos.map((t) => (t.id === todo.id ? updatedTodo : t)));
+    });
+  };
+
+  const openCount = todos.filter((t) => !t.isCompleted).length;
+
+   return (
+    <div className="min-h-screen py-16 px-4">
+      <div className="max-w-2xl mx-auto bg-[var(--paper-dark)]/50 border border-[var(--line)] rounded-sm shadow-[0_10px_30px_-14px_rgba(0,0,0,0.4)] p-8 sm:p-10 -rotate-[0.3deg]">
+        <header className="flex items-end justify-between border-b-2 border-[var(--ink)] pb-4 mb-6">
+          <h1 className="font-display text-3xl tracking-wide">TAPŞIRIQ DƏFTƏRİ</h1>
+          <span className="font-mono text-sm text-[var(--ink-faded)] uppercase tracking-widest">
+            {openCount} açıq
+          </span>
+        </header>
+
+        <TodoForm onCreate={handleCreate} />
+
+        <TodoList
+          todos={todos}
+          onDelete={handleDelete}
+          onToggle={handleToggle}
+          onUpdateTitle={handleUpdateTitle}
+        />
+
+        {todos.length === 0 && (
+          <p className="text-center text-base text-[var(--ink-faded)] py-10 font-mono">
+            Dəftər boşdur. İlk qeydi yaz.
+          </p>
+        )}
+      </div>
     </div>
   );
 }

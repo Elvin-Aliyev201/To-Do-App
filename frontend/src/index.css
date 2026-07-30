@@ -1,3 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --paper: #ECE4D0;
+  --paper-dark: #E1D7BE;
+  --ink: #262B36;
+  --ink-faded: #6B6458;
+  --line: #C7BB9E;
+  --stamp: #A13D3D;
+  --moss: #566B4A;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.font-display {
+  font-family: 'Special Elite', monospace;
+}
+
+@keyframes stamp-hit {
+  0%   { transform: scale(2.2) rotate(-8deg); opacity: 0; }
+  60%  { transform: scale(0.9) rotate(-8deg); opacity: 1; }
+  100% { transform: scale(1) rotate(-8deg); opacity: 1; }
+}
+
+.stamp {
+  animation: stamp-hit 0.35s cubic-bezier(0.2, 0.8, 0.3, 1.2);
+}
