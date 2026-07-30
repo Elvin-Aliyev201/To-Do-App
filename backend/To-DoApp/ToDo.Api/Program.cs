@@ -1,6 +1,7 @@
 
 using DotNetEnv;
 using Microsoft.EntityFrameworkCore;
+using Npgsql;
 using ToDo.Api.Data;
 using ToDo.Api.Services;
 
@@ -29,13 +30,18 @@ namespace ToDo.Api
                 throw new InvalidOperationException("POSTGRES_PASSWORD environment variable is missing.");
             }
 
-            var connectionString =
-                $"Host={databaseHost};" +
-                $"Port={databasePort};" +
-                $"Database={databaseName};" +
-                $"Username={databaseUser};" +
-                $"Password={databasePassword}"+
-                $"SSL Mode=Require;Trust Server Certificate=true"; ;
+            var connectionStringBuilder = new NpgsqlConnectionStringBuilder
+            {
+                Host = databaseHost,
+                Port = int.Parse(databasePort),
+                Database = databaseName,
+                Username = databaseUser,
+                Password = databasePassword,
+                SslMode = SslMode.Require,
+                TrustServerCertificate = true
+            };
+
+            var connectionString = connectionStringBuilder.ConnectionString;
 
             builder.Services.AddDbContext<AppDbContext>(options =>
             {
