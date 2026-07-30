@@ -3,7 +3,8 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 
 WORKDIR /src
 
-COPY backend/ToDo.Api/ToDo.Api.csproj backend/ToDo.Api/
+COPY backend/To-DoApp/
+    ToDo.Api/
 RUN dotnet restore backend/To-DoApp/ToDo.Api
 
 COPY . .
