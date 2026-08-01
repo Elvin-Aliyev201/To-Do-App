@@ -91,10 +91,15 @@ namespace ToDo.Api
             using (var scope = app.Services.CreateScope())
             {
                 var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-                db.Database.Migrate();
-            }
 
-            app.Run();
+              
+                db.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS \"Todos\" CASCADE;");
+                db.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS \"__EFMigrationsHistory\" CASCADE;");
+
+                db.Database.Migrate();
+
+
+                app.Run();
         }
     }
 }
