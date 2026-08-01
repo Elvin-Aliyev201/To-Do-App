@@ -95,8 +95,10 @@ namespace ToDo.Api
                 db.Database.Migrate();
 
 
-                app.Run();
+               
             }
+
+            app.Run();
         }
     }
 }
