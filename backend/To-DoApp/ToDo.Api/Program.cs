@@ -67,32 +67,32 @@ namespace ToDo.Api
             builder.Services.AddScoped<ITodoService, TodoService>();
 
             builder.Services.AddControllers();
-       
+
             builder.Services.AddOpenApi();
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             var app = builder.Build();
 
-          
-     
-                app.UseSwagger();
-                app.UseSwaggerUI(); 
-         
-            
+
+
+            app.UseSwagger();
+            app.UseSwaggerUI();
+
+
 
             app.UseHttpsRedirection();
             app.UseCors("AllowFrontend");
             app.UseAuthorization();
 
-          
+
             app.MapControllers();
 
             using (var scope = app.Services.CreateScope())
             {
                 var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-              
+
                 db.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS \"Todos\" CASCADE;");
                 db.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS \"__EFMigrationsHistory\" CASCADE;");
 
@@ -100,6 +100,7 @@ namespace ToDo.Api
 
 
                 app.Run();
+            }
         }
     }
 }
