@@ -4,24 +4,10 @@ namespace ToDo.Api.Services
 {
     public interface ITodoService
     {
-        Task<TodoDto> CreateAsync(
-       CreateTodoDto dto,
-       CancellationToken cancellationToken);
-
-        Task<List<TodoDto>> GetAllAsync(
-            CancellationToken cancellationToken);
-
-        Task<TodoDto?> GetByIdAsync(
-            int id,
-            CancellationToken cancellationToken);
-
-        Task<bool> UpdateAsync(
-            int id,
-            UpdateTodoDto dto,
-            CancellationToken cancellationToken);
-
-        Task<bool> DeleteAsync(
-            int id,
-            CancellationToken cancellationToken);
+        Task<List<TodoDto>> GetAllAsync(int userId, CancellationToken cancellationToken);
+        Task<TodoDto?> GetByIdAsync(int id, int userId, CancellationToken cancellationToken);
+        Task<TodoDto> CreateAsync(CreateTodoDto dto, int userId, CancellationToken cancellationToken);
+        Task<TodoDto?> UpdateAsync(int id, UpdateTodoDto dto, int userId, CancellationToken cancellationToken);
+        Task<bool> DeleteAsync(int id, int userId, CancellationToken cancellationToken);
     }
 }

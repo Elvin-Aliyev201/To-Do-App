@@ -4,7 +4,7 @@ import todoService from "../services/todoService";
 import TodoList from "../components/TodoList";
 import TodoForm from "../components/TodoForm";
 
-function Home() {
+function Home({onLogout}) {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
@@ -41,14 +41,22 @@ function Home() {
 
   const openCount = todos.filter((t) => !t.isCompleted).length;
 
-   return (
+  return (
     <div className="min-h-screen py-16 px-4">
       <div className="max-w-2xl mx-auto bg-[var(--paper-dark)]/50 border border-[var(--line)] rounded-sm shadow-[0_10px_30px_-14px_rgba(0,0,0,0.4)] p-8 sm:p-10 -rotate-[0.3deg]">
         <header className="flex items-end justify-between border-b-2 border-[var(--ink)] pb-4 mb-6">
           <h1 className="font-display text-3xl tracking-wide">TAPŞIRIQ DƏFTƏRİ</h1>
-          <span className="font-mono text-sm text-[var(--ink-faded)] uppercase tracking-widest">
-            {openCount} açıq
-          </span>
+          <div className="flex items-center gap-4">
+            <span className="font-mono text-sm text-[var(--ink-faded)] uppercase tracking-widest">
+              {openCount} açıq
+            </span>
+            <button
+              onClick={onLogout}
+              className="font-mono text-xs uppercase tracking-wide text-[var(--stamp)] hover:underline"
+            >
+              Çıxış
+            </button>
+          </div>
         </header>
 
         <TodoForm onCreate={handleCreate} />

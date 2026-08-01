@@ -18,12 +18,17 @@ namespace ToDo.Api.Configurations
                 .HasMaxLength(200);
 
 
-            builder.Property(t=>t.IsCompleted)
+            builder.Property(t => t.IsCompleted)
                 .HasDefaultValue(false);
 
 
             builder.Property(t => t.CreatedAt)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            builder.HasOne(t => t.User)
+               .WithMany()
+               .HasForeignKey(t => t.UserId)
+               .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

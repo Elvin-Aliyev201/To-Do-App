@@ -37,8 +37,8 @@ namespace ToDo.Api
                 Database = databaseName,
                 Username = databaseUser,
                 Password = databasePassword,
-                SslMode = SslMode.Require,
-                TrustServerCertificate = true
+                //SslMode = SslMode.Require,
+         
             };
 
             var connectionString = connectionStringBuilder.ConnectionString;
@@ -88,11 +88,11 @@ namespace ToDo.Api
           
             app.MapControllers();
 
-            using (var scope = app.Services.CreateScope())
-            {
-                var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-                db.Database.Migrate();
-            }
+            //using (var scope = app.Services.CreateScope())
+            //{
+            //    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+            //    db.Database.Migrate();
+            //}
 
             app.Run();
         }
