@@ -92,10 +92,6 @@ namespace ToDo.Api
             {
                 var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-
-                db.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS \"Todos\" CASCADE;");
-                db.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS \"__EFMigrationsHistory\" CASCADE;");
-
                 db.Database.Migrate();
 
 
