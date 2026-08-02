@@ -1,7 +1,10 @@
 
 using DotNetEnv;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Npgsql;
+using System.Text;
 using ToDo.Api.Data;
 using ToDo.Api.Services;
 
@@ -63,6 +66,34 @@ namespace ToDo.Api
                           .AllowAnyMethod();
                 });
             });
+
+
+            var jwtKey = Environment.GetEnvironmentVariable("JWT_KEY")
+            ?? throw new InvalidOperationException("JWT_KEY environment variable is missing.");
+            var jwtIssuer = builder.Configuration["Jwt:Issuer"] ?? "ToDoApi";
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidIssuer = jwtIssuer,
+                    ValidateAudience = false,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
+                };
+            });
+
+            builder.Services.AddAuthorization();
+
+
+
 
             builder.Services.AddScoped<ITodoService, TodoService>();
             builder.Services.AddScoped<IAuthService, AuthService>();
