@@ -4,7 +4,7 @@ import todoService from "../services/todoService";
 import TodoList from "../components/TodoList";
 import TodoForm from "../components/TodoForm";
 
-function Home({onLogout}) {
+function Home({username, onLogout}) {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
