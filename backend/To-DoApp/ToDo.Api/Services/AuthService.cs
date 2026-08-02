@@ -82,8 +82,10 @@ namespace ToDo.Api.Services
                 new Claim(ClaimTypes.Name, user.Username)
             };
 
-            var key = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
+            var jwtKey = Environment.GetEnvironmentVariable("JWT_KEY")
+      ?? throw new InvalidOperationException("JWT_KEY environment variable is missing.");
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
 
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 

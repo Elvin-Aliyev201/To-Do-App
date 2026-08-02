@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B9C05F0A-BCF0-FE33-BA92-C61650F69036}|ToDo.Api\\ToDo.Api.csproj|c:\\users\\user\\desktop\\to-do-app\\backend\\to-doapp\\todo.api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9C05F0A-BCF0-FE33-BA92-C61650F69036}|ToDo.Api\\ToDo.Api.csproj|solutionrelative:todo.api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B9C05F0A-BCF0-FE33-BA92-C61650F69036}|ToDo.Api\\ToDo.Api.csproj|c:\\users\\user\\desktop\\to-do-app\\backend\\to-doapp\\todo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9C05F0A-BCF0-FE33-BA92-C61650F69036}|ToDo.Api\\ToDo.Api.csproj|solutionrelative:todo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -49,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B9C05F0A-BCF0-FE33-BA92-C61650F69036}|ToDo.Api\\ToDo.Api.csproj|c:\\users\\user\\desktop\\to-do-app\\backend\\to-doapp\\todo.api\\services\\itodoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9C05F0A-BCF0-FE33-BA92-C61650F69036}|ToDo.Api\\ToDo.Api.csproj|solutionrelative:todo.api\\services\\itodoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9C05F0A-BCF0-FE33-BA92-C61650F69036}|ToDo.Api\\ToDo.Api.csproj|c:\\users\\user\\desktop\\to-do-app\\backend\\to-doapp\\todo.api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9C05F0A-BCF0-FE33-BA92-C61650F69036}|ToDo.Api\\ToDo.Api.csproj|solutionrelative:todo.api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B9C05F0A-BCF0-FE33-BA92-C61650F69036}|ToDo.Api\\ToDo.Api.csproj|c:\\users\\user\\desktop\\to-do-app\\backend\\to-doapp\\todo.api\\dtos\\auth\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -122,7 +122,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,19 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "ToDo.Api\\appsettings.json",
-              "ToolTip": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\appsettings.json",
-              "RelativeToolTip": "ToDo.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-29T19:55:44.767Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TodoController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\Controllers\\TodoController.cs",
               "RelativeDocumentMoniker": "ToDo.Api\\Controllers\\TodoController.cs",
@@ -154,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ToDo.Api.http",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\ToDo.Api.http",
               "RelativeDocumentMoniker": "ToDo.Api\\ToDo.Api.http",
@@ -166,20 +154,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\Program.cs",
               "RelativeDocumentMoniker": "ToDo.Api\\Program.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\Program.cs",
               "RelativeToolTip": "ToDo.Api\\Program.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAmwFUAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAmwFUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-29T18:11:18.997Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ToDo.Api.csproj",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\ToDo.Api.csproj",
               "RelativeDocumentMoniker": "ToDo.Api\\ToDo.Api.csproj",
@@ -191,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "ToDo.Api\\Properties\\launchSettings.json",
@@ -203,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TodoService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\Services\\TodoService.cs",
               "RelativeDocumentMoniker": "ToDo.Api\\Services\\TodoService.cs",
@@ -215,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ITodoService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\Services\\ITodoService.cs",
               "RelativeDocumentMoniker": "ToDo.Api\\Services\\ITodoService.cs",
@@ -227,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "ToDo.Api\\Controllers\\AuthController.cs",
@@ -239,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TodoMappings.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\Mappings\\TodoMappings.cs",
               "RelativeDocumentMoniker": "ToDo.Api\\Mappings\\TodoMappings.cs",
@@ -251,7 +239,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "ToDo.Api\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\Services\\AuthService.cs",
+              "RelativeToolTip": "ToDo.Api\\Services\\AuthService.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAmwFAAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-31T19:28:30.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "ToDo.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\appsettings.json",
+              "RelativeToolTip": "ToDo.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-29T19:55:44.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ClaimsPrincipalExtensions.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\Extensions\\ClaimsPrincipalExtensions.cs",
               "RelativeDocumentMoniker": "ToDo.Api\\Extensions\\ClaimsPrincipalExtensions.cs",
@@ -263,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\.gitignore",
               "RelativeDocumentMoniker": "ToDo.Api\\.gitignore",
@@ -356,18 +369,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-31T19:25:22.816Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "ToDo.Api\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\To-Do-App\\backend\\To-DoApp\\ToDo.Api\\Services\\AuthService.cs",
-              "RelativeToolTip": "ToDo.Api\\Services\\AuthService.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAmwBoAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T19:28:30.64Z"
             },
             {
               "$type": "Document",
