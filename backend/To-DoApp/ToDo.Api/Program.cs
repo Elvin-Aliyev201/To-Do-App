@@ -83,7 +83,7 @@ namespace ToDo.Api
        
 
             app.UseHttpsRedirection();
-      
+            app.UseAuthentication();
             app.UseAuthorization();
 
 
