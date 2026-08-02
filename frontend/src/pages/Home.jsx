@@ -41,28 +41,29 @@ function Home({username, onLogout}) {
 
   const openCount = todos.filter((t) => !t.isCompleted).length;
 
-   return (
-    <div className="min-h-screen py-6 sm:py-16 px-3 sm:px-4">
+ 
+  return (
+    <div className="min-h-screen py-8 sm:py-16 px-4">
       <div className="max-w-2xl mx-auto bg-[var(--paper-dark)]/50 border border-[var(--line)] rounded-sm shadow-[0_10px_30px_-14px_rgba(0,0,0,0.4)] p-5 sm:p-8 md:p-10 sm:-rotate-[0.3deg]">
-        <header className="flex flex-wrap items-start justify-between gap-y-2 border-b-2 border-[var(--ink)] pb-4 mb-6">
+        <header className="flex flex-wrap items-start justify-between gap-y-3 border-b-2 border-[var(--ink)] pb-4 mb-6">
           <div>
-            <h1 className="font-display text-xl sm:text-3xl tracking-wide">
+            <h1 className="font-display text-2xl sm:text-3xl tracking-wide">
               TAPŞIRIQ DƏFTƏRİ
             </h1>
             {username && (
-              <p className="font-mono text-xs text-[var(--ink-faded)] mt-1">
+              <p className="font-mono text-sm text-[var(--ink-faded)] mt-1">
                 sahib: <span className="text-[var(--moss)]">{username}</span>
               </p>
             )}
           </div>
 
-          <div className="flex items-center gap-3 sm:gap-4">
-            <span className="font-mono text-xs sm:text-sm text-[var(--ink-faded)] uppercase tracking-widest">
+          <div className="flex items-center gap-4">
+            <span className="font-mono text-sm text-[var(--ink-faded)] uppercase tracking-widest">
               {openCount} açıq
             </span>
             <button
               onClick={onLogout}
-              className="font-mono text-xs uppercase tracking-wide text-[var(--stamp)] hover:underline"
+              className="font-mono text-sm uppercase tracking-wide text-[var(--stamp)] hover:underline py-1"
             >
               Çıxış
             </button>
@@ -79,7 +80,7 @@ function Home({username, onLogout}) {
         />
 
         {todos.length === 0 && (
-          <p className="text-center text-sm sm:text-base text-[var(--ink-faded)] py-8 sm:py-10 font-mono">
+          <p className="text-center text-base text-[var(--ink-faded)] py-10 font-mono">
             Dəftər boşdur. İlk qeydi yaz.
           </p>
         )}
