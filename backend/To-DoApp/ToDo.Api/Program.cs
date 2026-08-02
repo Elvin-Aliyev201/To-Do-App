@@ -65,6 +65,7 @@ namespace ToDo.Api
             });
 
             builder.Services.AddScoped<ITodoService, TodoService>();
+            builder.Services.AddScoped<IAuthService, AuthService>();
 
             builder.Services.AddControllers();
 
